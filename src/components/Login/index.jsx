@@ -27,6 +27,7 @@ const Login = () => {
       .then((response) => response.json())
       .then((data) => {
         if(data.length){
+          console.log(data);
           alert('Successfully Login')
           localStorage.setItem('UserType', data[0].type)
           localStorage.setItem('Email', data[0].email)
